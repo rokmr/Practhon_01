@@ -3,7 +3,7 @@
 import numpy as np
 import time
 
-Actual_Ans_1M=[316385, 273688, 936940, 257478, 368156, 683745, 585955, 900884, 681310,  51238]
+trueAns=[316385, 273688, 936940, 257478, 368156, 683745, 585955, 900884, 681310,  51238]
 
 def hashGenr(arrayVector,normalVector):
     h_dot=np.dot(arrayVector,normalVector)
@@ -74,7 +74,7 @@ print(listFinal)
 
 c=0
 for i in range(10):
-    if Actual_Ans_1M[i] in listFinal:
+    if trueAns[i] in listFinal:
         c=c+1
 
 print(f"The accuracy is:{c/10*100} %")
